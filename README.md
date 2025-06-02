@@ -4,6 +4,7 @@ few notes:
 + `python convert.py src ref dst`
 + xx 3ds ver. save size is `4726152 bytes`, xx ns ver. save size is `4726188 bytes`, the switch ver. has a larger header
 + gu save size is `5159100 bytes`, which has larger dlc storage (for multilanguage) and chat shortcut storage(idk why, but while jp versions use `60` bytes, gu has `44` extra bytes per sentence)
+
 file stucture:
 ```
 # xx 3ds ver.
