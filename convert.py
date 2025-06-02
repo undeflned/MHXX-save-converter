@@ -40,10 +40,10 @@ def fix_chat_jp2ww(new_save_data, save, slot_position, chat_position):
 def convertion(source, reference):
     save_types = ["3DS", "XX", "GU"]
     file_lengths = [4726152, 4726188, 5159100]
-    initial_positions = (1205364, 1205400, 1625244)
-    slot_positions = [[1205364, 2378801, 3552241], 
-                      [1205400, 2378837, 3552277], 
-                      [1625244, 2803037, 3980833]]
+    initial_positions = (1205361, 1205397, 1625241)
+    slot_positions = [[1205361, 2378801, 3552241], 
+                      [1205397, 2378837, 3552277], 
+                      [1625241, 2803037, 3980833]]
     chat_positions = [[2372861, 3546301, 4719741], 
                       [2372897, 3546337, 4719777], 
                       [2792741, 3970537, 5148333]]

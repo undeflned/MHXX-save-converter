@@ -21,7 +21,7 @@ file+0x00000000
                 dlc cat info #2 - #50
     +0x00004072
                 dlc contents(item packs, event quests etc.) padding might be included
-    +0x00126474
+    +0x00126471
                 save slot #1
     +0x002434FD
                 chat shortcuts #1
@@ -46,7 +46,7 @@ file+0x00000000
                 dlc cat info #2 - #50
     +0x00004096
                 dlc contents(item packs, event quests etc.) padding might be included
-    +0x00126498
+    +0x00126495
                 save slot #1
     +0x00243521
                 chat shortcuts #1
@@ -71,7 +71,7 @@ file+0x00000000
                 dlc cat info #2 - #50
     +0x00004096
                 dlc contents(item packs, event quests etc.) padding might be included
-    +0x0018CC9C
+    +0x0018CC99
                 save slot #1
     +0x002A9D25
                 chat shortcuts #1
