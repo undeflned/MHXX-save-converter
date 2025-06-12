@@ -15,11 +15,11 @@ file+0x00000000
                 slots info (0x00000000 - no slots used, 0x01000000 - slot #1 used, others not tested, NEVER edit it if only converting save version)
     +0x00000008
                 blah_blah_blah
-    +0x0000012A
+    +0x0000002A
                 dlc cat info #1
-    +0x0000026E
+    +0x0000016E
                 dlc cat info #2 - #50
-    +0x00004072
+    +0x00003F72
                 dlc contents(item packs, event quests etc.) padding might be included
     +0x00126471
                 save slot #1
@@ -40,11 +40,11 @@ file+0x00000000
                 slots info (0x00000000 - no slots used, 0x01000000 - slot #1 used, others not tested, NEVER edit it if only converting save version)
     +0x0000002C
                 blah_blah_blah
-    +0x0000014E
+    +0x0000004E
                 dlc cat info #1
-    +0x00000292
+    +0x00000192
                 dlc cat info #2 - #50
-    +0x00004096
+    +0x00003F96
                 dlc contents(item packs, event quests etc.) padding might be included
     +0x00126495
                 save slot #1
@@ -65,11 +65,11 @@ file+0x00000000
                 slots info (0x00000000 - no slots used, 0x01000000 - slot #1 used, others not tested, NEVER edit it if only converting save version)
     +0x0000002C
                 blah_blah_blah
-    +0x0000014E
+    +0x0000004E
                 dlc cat info #1
-    +0x00000292
+    +0x00000192
                 dlc cat info #2 - #50
-    +0x00004096
+    +0x00003F96
                 dlc contents(item packs, event quests etc.) padding might be included
     +0x0018CC99
                 save slot #1
