@@ -38,17 +38,17 @@ def fix_chat_jp2ww(new_save_data, save, slot_position, chat_position):
 
 
 def convertion(source, reference):
+    # constants
     save_types = ["3DS", "XX", "GU"]
-    file_lengths = [4726152, 4726188, 5159100]
-    initial_positions = (1205361, 1205397, 1625241)
-    slot_positions = [[1205361, 2378801, 3552241], 
-                      [1205397, 2378837, 3552277], 
-                      [1625241, 2803037, 3980833]]
-    chat_positions = [[2372861, 3546301, 4719741], 
-                      [2372897, 3546337, 4719777], 
-                      [2792741, 3970537, 5148333]]
+    file_lengths = [0x00481D88, 0x00481DAC, 0x004EB8BC]
+    slot_positions = [[0x00126471, 0x00244C31, 0x003633F1], 
+                      [0x00126495, 0x00244C55, 0x00363415], 
+                      [0x0018CC99, 0x002AC55D, 0x003CBE21]]
+    chat_positions = [[0x002434FD, 0x00361CBD, 0x0048047D], 
+                      [0x00243521, 0x00361CE1, 0x004804A1], 
+                      [0x002A9D25, 0x003C95E9, 0x004E8EAD]]
     chat_lengths = [5940, 5940, 10296]
-    slot_info_positions = [4, 40, 40]
+    slot_info_positions = [0x00000004, 0x00000028, 0x00000028]
 
     source_file = get_file(source)
     try:
@@ -67,7 +67,7 @@ def convertion(source, reference):
 
     # new header
     new_save = ref_file[:slot_info_positions[ref_type]] + source_file[slot_info_positions[src_type]:slot_info_positions[src_type]+4] + \
-        ref_file[slot_info_positions[ref_type]+4:initial_positions[ref_type]]
+        ref_file[slot_info_positions[ref_type]+4:slot_positions[ref_type][0]]
     # chat convertion + save data concatenation
     if src_type in (0, 1) and ref_type == 2:
         for i, chat_position in enumerate(chat_positions[src_type]):
@@ -78,13 +78,13 @@ def convertion(source, reference):
             new_save = fix_chat_ww2jp(new_save, source_file, slot_positions[src_type][i], chat_position)
         new_save += source_file[chat_positions[src_type][2] + chat_lengths[src_type]:]
     else:
-        new_save += source_file[initial_positions[src_type]:]
+        new_save += source_file[slot_positions[src_type][0]:]
     
     return new_save
 
 if __name__ == "__main__":
     if len(sys.argv) != 4:
-        print("Usage: python convert.py <source_save> <reference_save> <destination>")
+        print(f"Usage: python {sys.argv[0]} source_save reference_save destination")
         sys.exit()
     new_save = convertion(sys.argv[1], sys.argv[2])
     with open(sys.argv[3], "wb") as f:
