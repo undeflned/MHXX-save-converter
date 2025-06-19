@@ -1,7 +1,7 @@
 A simple script that converts your MHXX save file to its 3DS or NS jp/global ver,  made for my convenience.
 
 + Usage: `python convert.py src ref dst`.
-+ ALWAYS backup your save files before tamper them.
++ ALWAYS backup your save files before tampering them.
 + I didn't try the 3DS ver, it should work, but no guarentee.
 + The 3 save files are blank files with corresponding DLCs, the XX switch ver blank save contains most of the DLC otomos.
 + `otomo/` contains a full list of DLC otomos in JP ver.
