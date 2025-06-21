@@ -84,7 +84,7 @@ def convertion(source, reference):
 
 if __name__ == "__main__":
     if len(sys.argv) != 4:
-        print(f"Usage: python {sys.argv[0]} source_save reference_save destination")
+        print(f"Usage: python {os.path.basename(__file__)} source_save reference_save destination")
         sys.exit()
     new_save = convertion(sys.argv[1], sys.argv[2])
     with open(sys.argv[3], "wb") as f:
